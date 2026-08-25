@@ -1,0 +1,2175 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Queluxy Tours | Safari Za Kipekee</title>
+
+  <meta
+    name="description"
+    content="Queluxy Tours - Gundua Tanzania kupitia safari, fukwe, milima, wanyamapori, utamaduni na luxury experiences."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =====================================================
+       RESET
+    ===================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #070707;
+      --dark: #0d0d0d;
+      --dark-2: #121212;
+
+      --gold: #d4af37;
+      --gold-light: #f1d77a;
+
+      --white: #ffffff;
+      --muted: #999999;
+
+      --line: rgba(212, 175, 55, 0.18);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: "Montserrat", sans-serif;
+      overflow-x: hidden;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 78px;
+
+      z-index: 9999;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 5%;
+
+      background: rgba(7, 7, 7, 0.72);
+      backdrop-filter: blur(18px);
+
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .logo {
+      text-decoration: none;
+      color: var(--gold-light);
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 32px;
+      font-weight: 700;
+
+      letter-spacing: 4px;
+
+      line-height: 0.7;
+    }
+
+    .logo small {
+      display: block;
+
+      text-align: center;
+
+      margin-top: 8px;
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: 8px;
+      letter-spacing: 6px;
+
+      color: var(--gold);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .header-link {
+      color: #ddd;
+      text-decoration: none;
+
+      font-size: 12px;
+
+      transition: 0.3s;
+    }
+
+    .header-link:hover {
+      color: var(--gold-light);
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+      position: relative;
+
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      padding: 120px 5% 80px;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.92) 0%,
+          rgba(0,0,0,0.72) 45%,
+          rgba(0,0,0,0.25) 100%
+        ),
+        url("https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=2200&q=90")
+        center / cover no-repeat;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+
+      width: 100%;
+      max-width: 760px;
+
+      animation: heroReveal 1.2s ease forwards;
+    }
+
+    .hero-label {
+      color: var(--gold-light);
+
+      font-size: 11px;
+
+      letter-spacing: 6px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(60px, 8vw, 115px);
+
+      line-height: 0.85;
+
+      font-weight: 600;
+
+      margin-bottom: 30px;
+    }
+
+    .hero-title span {
+      color: var(--gold-light);
+    }
+
+    .hero-text {
+      max-width: 600px;
+
+      color: #ddd;
+
+      font-size: 14px;
+
+      line-height: 1.9;
+
+      margin-bottom: 35px;
+    }
+
+    .hero-button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 15px 28px;
+
+      border-radius: 50px;
+
+      background: var(--gold);
+
+      color: #000;
+
+      text-decoration: none;
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+      transition: 0.35s;
+    }
+
+    .hero-button:hover {
+      background: var(--gold-light);
+
+      transform: translateY(-3px);
+    }
+
+
+    /* =====================================================
+       EXPLORER
+    ===================================================== */
+
+    .explorer-section {
+      position: relative;
+
+      min-height: 850px;
+
+      padding: 110px 5%;
+
+      background:
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(212,175,55,0.08),
+          transparent 35%
+        ),
+        var(--black);
+    }
+
+    .explorer-heading {
+      max-width: 1200px;
+
+      margin: 0 auto 55px;
+    }
+
+    .explorer-label {
+      color: var(--gold);
+
+      font-size: 10px;
+
+      letter-spacing: 5px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 10px;
+    }
+
+    .explorer-heading h2 {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(45px, 6vw, 72px);
+
+      font-weight: 600;
+    }
+
+    .explorer-heading p {
+      color: var(--muted);
+
+      font-size: 13px;
+
+      margin-top: 12px;
+
+      max-width: 600px;
+
+      line-height: 1.8;
+    }
+
+
+    /* =====================================================
+       LAYER SYSTEM
+    ===================================================== */
+
+    .explorer {
+      position: relative;
+
+      max-width: 1400px;
+
+      min-height: 560px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns: 220px 260px 1fr;
+
+      gap: 18px;
+    }
+
+
+    /* -----------------------------------------------------
+       COMMON PANEL
+    ----------------------------------------------------- */
+
+    .panel {
+      position: relative;
+
+      min-height: 540px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,0.045),
+          rgba(255,255,255,0.015)
+        );
+
+      border: 1px solid var(--line);
+
+      border-radius: 22px;
+
+      overflow: hidden;
+
+      backdrop-filter: blur(14px);
+
+      box-shadow:
+        0 30px 80px rgba(0,0,0,0.35);
+    }
+
+    .panel-title {
+      padding: 24px 22px 18px;
+
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+
+      color: var(--gold-light);
+
+      font-size: 10px;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =====================================================
+       CATEGORY PANEL
+    ===================================================== */
+
+    .category-list {
+      padding: 14px;
+    }
+
+    .category-btn {
+      position: relative;
+
+      width: 100%;
+
+      border: 0;
+
+      background: transparent;
+
+      color: #aaa;
+
+      text-align: left;
+
+      padding: 16px 14px;
+
+      border-radius: 12px;
+
+      cursor: pointer;
+
+      font-size: 12px;
+
+      transition: 0.3s;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+    }
+
+    .category-btn:hover {
+      color: #fff;
+
+      background: rgba(212,175,55,0.07);
+    }
+
+    .category-btn.active {
+      color: var(--gold-light);
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(212,175,55,0.14),
+          transparent
+        );
+    }
+
+    .category-btn.active::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: 10px;
+      bottom: 10px;
+
+      width: 2px;
+
+      background: var(--gold);
+    }
+
+    .category-icon {
+      width: 25px;
+
+      font-size: 18px;
+    }
+
+
+    /* =====================================================
+       REGION PANEL
+    ===================================================== */
+
+    .region-list {
+      padding: 14px;
+    }
+
+    .region-btn {
+      width: 100%;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      padding: 15px;
+
+      margin-bottom: 4px;
+
+      border: 0;
+
+      border-radius: 12px;
+
+      background: transparent;
+
+      color: #aaa;
+
+      cursor: pointer;
+
+      text-align: left;
+
+      font-size: 12px;
+
+      transition: 0.3s;
+    }
+
+    .region-btn:hover {
+      color: #fff;
+
+      background: rgba(255,255,255,0.04);
+    }
+
+    .region-btn.active {
+      color: var(--gold-light);
+
+      background: rgba(212,175,55,0.08);
+    }
+
+    .region-arrow {
+      color: var(--gold);
+    }
+
+
+    /* =====================================================
+       DESTINATION PANEL
+    ===================================================== */
+
+    .destination-content {
+      height: 100%;
+
+      padding: 18px;
+    }
+
+    .destination-empty {
+      min-height: 450px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      color: #666;
+
+      padding: 30px;
+    }
+
+    .destination-empty strong {
+      display: block;
+
+      color: #aaa;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 32px;
+
+      margin-bottom: 10px;
+    }
+
+    .destination-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 12px;
+    }
+
+    .destination-card {
+      position: relative;
+
+      min-height: 220px;
+
+      overflow: hidden;
+
+      border-radius: 16px;
+
+      cursor: pointer;
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      animation: cardReveal 0.55s ease forwards;
+    }
+
+    .destination-card img {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      inset: 0;
+
+      object-fit: cover;
+
+      transition: 0.6s;
+    }
+
+    .destination-card::after {
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,0.9),
+          rgba(0,0,0,0.05)
+        );
+    }
+
+    .destination-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .destination-info {
+      position: absolute;
+
+      z-index: 2;
+
+      left: 16px;
+      right: 16px;
+      bottom: 15px;
+    }
+
+    .destination-info small {
+      color: var(--gold-light);
+
+      font-size: 9px;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .destination-info h3 {
+      margin-top: 4px;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 25px;
+
+      font-weight: 600;
+    }
+
+
+    /* =====================================================
+       DESTINATION DETAIL MODAL
+    ===================================================== */
+
+    .modal {
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 20000;
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 25px;
+
+      background: rgba(0,0,0,0.82);
+
+      backdrop-filter: blur(12px);
+    }
+
+    .modal.open {
+      display: flex;
+
+      animation: fadeIn 0.35s ease;
+    }
+
+    .modal-box {
+      position: relative;
+
+      width: min(1050px, 100%);
+
+      max-height: 90vh;
+
+      overflow-y: auto;
+
+      background: #0d0d0d;
+
+      border: 1px solid var(--line);
+
+      border-radius: 25px;
+
+      overflow-x: hidden;
+
+      box-shadow: 0 50px 120px rgba(0,0,0,0.7);
+    }
+
+    .modal-image {
+      width: 100%;
+
+      height: 360px;
+
+      object-fit: cover;
+    }
+
+    .modal-body {
+      padding: 35px;
+    }
+
+    .modal-location {
+      color: var(--gold);
+
+      font-size: 10px;
+
+      letter-spacing: 4px;
+
+      text-transform: uppercase;
+    }
+
+    .modal-title {
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 55px;
+
+      margin: 7px 0 15px;
+    }
+
+    .modal-description {
+      color: #aaa;
+
+      font-size: 13px;
+
+      line-height: 1.9;
+
+      max-width: 800px;
+
+      margin-bottom: 25px;
+    }
+
+    .modal-close {
+      position: absolute;
+
+      top: 18px;
+      right: 18px;
+
+      z-index: 3;
+
+      width: 42px;
+      height: 42px;
+
+      border: 1px solid rgba(255,255,255,0.3);
+
+      border-radius: 50%;
+
+      background: rgba(0,0,0,0.6);
+
+      color: #fff;
+
+      cursor: pointer;
+
+      font-size: 20px;
+
+      transition: 0.3s;
+    }
+
+    .modal-close:hover {
+      background: var(--gold);
+
+      color: #000;
+    }
+
+
+    /* =====================================================
+       WHATSAPP
+    ===================================================== */
+
+    .whatsapp {
+      position: fixed;
+
+      right: 22px;
+      bottom: 22px;
+
+      z-index: 30000;
+
+      width: 62px;
+      height: 62px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #25D366;
+
+      box-shadow:
+        0 10px 35px rgba(37,211,102,0.35);
+
+      animation: whatsappPulse 2.3s infinite;
+
+      transition: 0.3s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp svg {
+      width: 30px;
+      height: 30px;
+
+      fill: #fff;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      padding: 60px 5%;
+
+      text-align: center;
+
+      background: #050505;
+
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    footer p {
+      margin-top: 18px;
+
+      color: #666;
+
+      font-size: 11px;
+    }
+
+
+    /* =====================================================
+       ANIMATIONS
+    ===================================================== */
+
+    @keyframes heroReveal {
+
+      from {
+        opacity: 0;
+        transform: translateY(35px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+    }
+
+    @keyframes cardReveal {
+
+      from {
+        opacity: 0;
+        transform: translateX(25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+    }
+
+    @keyframes fadeIn {
+
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+
+    }
+
+    @keyframes whatsappPulse {
+
+      0% {
+        box-shadow:
+          0 0 0 0 rgba(37,211,102,0.45);
+      }
+
+      70% {
+        box-shadow:
+          0 0 0 16px rgba(37,211,102,0);
+      }
+
+      100% {
+        box-shadow:
+          0 0 0 0 rgba(37,211,102,0);
+      }
+
+    }
+
+
+    /* =====================================================
+       TABLET
+    ===================================================== */
+
+    @media (max-width: 1000px) {
+
+      .explorer {
+        grid-template-columns: 190px 220px 1fr;
+      }
+
+      .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 760px) {
+
+      .header {
+        height: 68px;
+
+        padding: 0 20px;
+      }
+
+      .header-link {
+        display: none;
+      }
+
+      .logo {
+        font-size: 27px;
+      }
+
+      .hero {
+        min-height: 850px;
+
+        padding: 120px 22px 70px;
+
+        background-position: 65% center;
+      }
+
+      .hero-title {
+        font-size: 64px;
+      }
+
+      .hero-text {
+        font-size: 12px;
+      }
+
+      .explorer-section {
+        padding: 85px 15px;
+      }
+
+      .explorer-heading {
+        padding: 0 8px;
+      }
+
+      .explorer {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 12px;
+      }
+
+      .panel {
+        min-height: auto;
+
+        max-height: none;
+      }
+
+      .category-list {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 3px;
+      }
+
+      .category-btn {
+        padding: 13px 10px;
+
+        font-size: 10px;
+      }
+
+      .region-list {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 4px;
+      }
+
+      .region-btn {
+        margin: 0;
+
+        padding: 12px;
+
+        font-size: 10px;
+      }
+
+      .destination-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .destination-card {
+        min-height: 250px;
+      }
+
+      .modal {
+        padding: 10px;
+      }
+
+      .modal-image {
+        height: 250px;
+      }
+
+      .modal-body {
+        padding: 25px;
+      }
+
+      .modal-title {
+        font-size: 42px;
+      }
+
+      .whatsapp {
+        width: 58px;
+        height: 58px;
+
+        right: 17px;
+        bottom: 17px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       HEADER
+  ===================================================== -->
+
+  <header class="header">
+
+    <a href="#" class="logo">
+      QUELUXY
+      <small>TOURS</small>
+    </a>
+
+    <div class="header-right">
+
+      <a href="#explore" class="header-link">
+        Gundua Tanzania
+      </a>
+
+      <a
+        href="https://wa.me/255745179214"
+        target="_blank"
+        class="hero-button"
+      >
+        Wasiliana Nasi
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       HERO
+  ===================================================== -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-label">
+        Karibu Tanzania
+      </div>
+
+      <h1 class="hero-title">
+        Safari Za
+        <span>Kipekee.</span>
+        <br>
+        Ladha Ya Kifahari.
+      </h1>
+
+      <p class="hero-text">
+        Gundua Tanzania kupitia safari zilizochaguliwa kwa upekee.
+        Kutoka fukwe na visiwa, milima na hiking, hadi wanyamapori,
+        utamaduni, adventure na luxury experiences.
+      </p>
+
+      <a href="#explore" class="hero-button">
+        Anza Kuchunguza
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       EXPLORER
+  ===================================================== -->
+
+  <section class="explorer-section" id="explore">
+
+    <div class="explorer-heading">
+
+      <div class="explorer-label">
+        Explore Tanzania
+      </div>
+
+      <h2>
+        Chagua Safari Yako
+      </h2>
+
+      <p>
+        Chagua category, kisha mkoa, halafu gundua vivutio
+        vilivyopo katika eneo hilo.
+      </p>
+
+    </div>
+
+
+    <div class="explorer">
+
+
+      <!-- =================================================
+           LAYER 1 - CATEGORIES
+      ================================================= -->
+
+      <div class="panel">
+
+        <div class="panel-title">
+          Categories
+        </div>
+
+        <div class="category-list" id="categoryList">
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           LAYER 2 - REGIONS
+      ================================================= -->
+
+      <div class="panel">
+
+        <div class="panel-title">
+          Mikoa / Maeneo
+        </div>
+
+        <div class="region-list" id="regionList">
+
+          <div class="destination-empty">
+            <div>
+              <strong>Chagua Category</strong>
+              Anza kwa kuchagua category upande wa kushoto.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =================================================
+           LAYER 3 - DESTINATIONS
+      ================================================= -->
+
+      <div class="panel">
+
+        <div class="panel-title">
+          Vivutio
+        </div>
+
+        <div class="destination-content" id="destinationContent">
+
+          <div class="destination-empty">
+            <div>
+              <strong>Gundua Tanzania</strong>
+              Chagua category na mkoa ili kuona vivutio.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       DESTINATION MODAL
+  ===================================================== -->
+
+  <div class="modal" id="destinationModal">
+
+    <div class="modal-box">
+
+      <button
+        class="modal-close"
+        id="modalClose"
+        aria-label="Funga"
+      >
+        ×
+      </button>
+
+      <img
+        id="modalImage"
+        class="modal-image"
+        src=""
+        alt=""
+      >
+
+      <div class="modal-body">
+
+        <div
+          id="modalLocation"
+          class="modal-location"
+        ></div>
+
+        <h2
+          id="modalTitle"
+          class="modal-title"
+        ></h2>
+
+        <p
+          id="modalDescription"
+          class="modal-description"
+        ></p>
+
+        <a
+          id="modalWhatsapp"
+          href="#"
+          target="_blank"
+          class="hero-button"
+        >
+          Uliza Kuhusu Safari Hii
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       WHATSAPP FLOATING BUTTON
+  ===================================================== -->
+
+  <a
+    href="https://wa.me/255745179214?text=Habari%20Queluxy%20Tours%2C%20ningependa%20kujua%20zaidi%20kuhusu%20safari."
+    target="_blank"
+    class="whatsapp"
+    aria-label="WhatsApp Queluxy Tours"
+  >
+
+    <svg
+      viewBox="0 0 32 32"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+
+      <path d="M16 3C8.82 3 3 8.65 3 15.62c0 2.48.73 4.79 2 6.74L3.1 29l6.82-1.86A13.1 13.1 0 0 0 16 28.24c7.18 0 13-5.65 13-12.62S23.18 3 16 3zm0 22.95c-2.05 0-3.96-.6-5.57-1.64l-.4-.25-4.05 1.1 1.1-3.87-.27-.42a10.55 10.55 0 0 1-1.62-5.25C5.19 9.85 10.04 5.1 16 5.1s10.81 4.75 10.81 10.52S21.96 25.95 16 25.95zm5.94-7.9c-.33-.17-1.96-.95-2.26-1.06-.3-.11-.52-.17-.74.17-.22.33-.85 1.06-1.04 1.28-.19.22-.38.25-.71.08-.33-.17-1.39-.51-2.65-1.62-.98-.86-1.64-1.91-1.83-2.24-.19-.33-.02-.51.14-.68.15-.15.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.58-.08-.17-.74-1.77-1.01-2.42-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.58.08-.88.41-.3.33-1.15 1.11-1.15 2.7s1.18 3.13 1.34 3.35c.16.22 2.32 3.57 5.62 5 .79.34 1.41.54 1.89.69.79.24 1.51.21 2.08.13.63-.09 1.96-.8 2.24-1.58.27-.78.27-1.45.19-1.58-.08-.14-.3-.22-.63-.39z"/>
+
+    </svg>
+
+  </a>
+
+
+  <!-- =====================================================
+       FOOTER
+  ===================================================== -->
+
+  <footer>
+
+    <a href="#" class="logo">
+      QUELUXY
+      <small>TOURS</small>
+    </a>
+
+    <p>
+      © 2026 Queluxy Tours — Safari Za Kipekee, Ladha Ya Kifahari.
+    </p>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ===================================================== -->
+
+  <script>
+
+    /*
+      ======================================================
+      QUELUXY TOURS
+      LAYER SYSTEM
+
+      CATEGORY
+          ↓
+      REGION
+          ↓
+      DESTINATION
+          ↓
+      DETAILS
+      ======================================================
+    */
+
+
+    const tourismData = {
+
+
+      /* ==================================================
+         FUKWE & VISIWA
+      ================================================== */
+
+      beaches: {
+
+        name: "Fukwe & Visiwa",
+        icon: "🏝️",
+
+        regions: {
+
+          "Dar es Salaam": [
+
+            {
+              name: "Mbudya Island",
+              type: "Kisiwa",
+              image:
+                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Mbudya Island ni moja ya maeneo maarufu ya mapumziko karibu na Dar es Salaam. Ni sehemu nzuri kwa beach day, kuogelea, kupumzika na kufurahia mandhari ya bahari."
+            },
+
+            {
+              name: "Bongoyo Island",
+              type: "Kisiwa",
+              image:
+                "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Bongoyo Island inatoa experience ya kisiwa karibu na Dar es Salaam, ikiwa na fukwe, maji safi na mazingira mazuri kwa mapumziko."
+            },
+
+            {
+              name: "Coco Beach",
+              type: "Beach",
+              image:
+                "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Coco Beach ni eneo maarufu la ufukweni Dar es Salaam linalofaa kwa kutembea, kupumzika na kufurahia mazingira ya bahari."
+            },
+
+            {
+              name: "Kigamboni",
+              type: "Beach Area",
+              image:
+                "https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Kigamboni ina maeneo mbalimbali ya fukwe na resorts yanayofaa kwa mapumziko na weekend experiences."
+            }
+
+          ],
+
+
+          "Mwanza": [
+
+            {
+              name: "Saanane Island",
+              type: "Kisiwa",
+              image:
+                "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Saanane Island ni eneo la kipekee Mwanza linalochanganya mazingira ya ziwa, wildlife na mandhari nzuri."
+            },
+
+            {
+              name: "Lake Victoria",
+              type: "Ziwa",
+              image:
+                "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Maeneo ya Lake Victoria karibu na Mwanza yana mandhari nzuri kwa boat experiences, sunset views na mapumziko."
+            }
+
+          ],
+
+
+          "Tanga": [
+
+            {
+              name: "Pangani",
+              type: "Beach Destination",
+              image:
+                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Pangani inajulikana kwa fukwe, historia, utamaduni wa pwani na mazingira tulivu."
+            },
+
+            {
+              name: "Ushongo Beach",
+              type: "Beach",
+              image:
+                "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Ushongo ni eneo la pwani lenye mazingira tulivu na fukwe zinazofaa kwa mapumziko."
+            }
+
+          ],
+
+
+          "Pwani": [
+
+            {
+              name: "Bagamoyo",
+              type: "Beach & History",
+              image:
+                "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Bagamoyo inaunganisha historia ya Tanzania na mazingira ya pwani, na ni sehemu nzuri kwa cultural tours."
+            },
+
+            {
+              name: "Saadani",
+              type: "Beach & Safari",
+              image:
+                "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Saadani ni eneo la kipekee linalounganisha safari ya wanyamapori na beach experience."
+            }
+
+          ],
+
+
+          "Zanzibar": [
+
+            {
+              name: "Nungwi",
+              type: "Beach",
+              image:
+                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Nungwi ni mojawapo ya maeneo maarufu ya beach Zanzibar, likiwa na fukwe nzuri na activities mbalimbali za baharini."
+            },
+
+            {
+              name: "Kendwa",
+              type: "Beach",
+              image:
+                "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Kendwa inajulikana kwa beach nzuri, sunset experiences na mazingira ya mapumziko."
+            },
+
+            {
+              name: "Paje",
+              type: "Beach & Adventure",
+              image:
+                "https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Paje ni eneo maarufu kwa beach, watersports na adventure za baharini."
+            }
+
+          ],
+
+
+          "Mtwara": [
+
+            {
+              name: "Mikindani",
+              type: "Coastal Experience",
+              image:
+                "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Mikindani ina historia, utamaduni wa pwani na mandhari nzuri ya kusini mwa Tanzania."
+            },
+
+            {
+              name: "Msimbati",
+              type: "Beach",
+              image:
+                "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Msimbati ni eneo la pwani lenye mazingira mazuri kwa mapumziko na beach experiences."
+            }
+
+          ]
+
+        }
+
+      },
+
+
+      /* ==================================================
+         MILIMA
+      ================================================== */
+
+      mountains: {
+
+        name: "Milima & Hiking",
+        icon: "🏔️",
+
+        regions: {
+
+          "Kilimanjaro": [
+
+            {
+              name: "Mount Kilimanjaro",
+              type: "Mountain",
+              image:
+                "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Mlima Kilimanjaro ni moja ya alama kubwa za Tanzania na destination maarufu kwa hiking na mountain trekking."
+            }
+
+          ],
+
+          "Arusha": [
+
+            {
+              name: "Mount Meru",
+              type: "Mountain",
+              image:
+                "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Mount Meru ni destination nzuri kwa hiking na mountain adventure karibu na Arusha."
+            }
+
+          ],
+
+          "Morogoro": [
+
+            {
+              name: "Uluguru Mountains",
+              type: "Mountain",
+              image:
+                "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Milima ya Uluguru inatoa hiking, nature walks na mandhari nzuri ya Morogoro."
+            }
+
+          ]
+
+        }
+
+      },
+
+
+      /* ==================================================
+         SAFARI
+      ================================================== */
+
+      safari: {
+
+        name: "Safari & Wanyamapori",
+        icon: "🦁",
+
+        regions: {
+
+          "Arusha": [
+
+            {
+              name: "Arusha National Park",
+              type: "National Park",
+              image:
+                "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Arusha National Park inatoa wildlife experiences pamoja na mandhari ya milima na misitu."
+            }
+
+          ],
+
+          "Manyara": [
+
+            {
+              name: "Lake Manyara National Park",
+              type: "National Park",
+              image:
+                "https://images.unsplash.com/photo-1535338454770-8be927b5a00b?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Lake Manyara National Park ni maarufu kwa mandhari ya ziwa, misitu na wildlife."
+            }
+
+          ],
+
+          "Mara": [
+
+            {
+              name: "Serengeti",
+              type: "National Park",
+              image:
+                "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Serengeti ni moja ya maeneo maarufu zaidi duniani kwa safari za wanyamapori."
+            }
+
+          ]
+
+        }
+
+      },
+
+
+      /* ==================================================
+         NATURE
+      ================================================== */
+
+      nature: {
+
+        name: "Nature & Adventure",
+        icon: "🌿",
+
+        regions: {
+
+          "Morogoro": [
+
+            {
+              name: "Udzungwa Mountains",
+              type: "Nature & Hiking",
+              image:
+                "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Udzungwa ni destination nzuri kwa hiking, waterfalls, forests na nature adventures."
+            }
+
+          ],
+
+          "Tanga": [
+
+            {
+              name: "Amani Nature Reserve",
+              type: "Forest",
+              image:
+                "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Amani Nature Reserve inatoa forest experiences, nature walks na mazingira ya kipekee."
+            }
+
+          ]
+
+        }
+
+      },
+
+
+      /* ==================================================
+         CULTURE
+      ================================================== */
+
+      culture: {
+
+        name: "Utamaduni & Historia",
+        icon: "🏛️",
+
+        regions: {
+
+          "Dar es Salaam": [
+
+            {
+              name: "Makumbusho ya Taifa",
+              type: "History & Culture",
+              image:
+                "https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Sehemu za historia na utamaduni Dar es Salaam zinazofaa kwa cultural experiences."
+            }
+
+          ],
+
+          "Zanzibar": [
+
+            {
+              name: "Stone Town",
+              type: "Historical Site",
+              image:
+                "https://images.unsplash.com/photo-1586861635169-e5223aadc9fe?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Stone Town ni eneo lenye historia, usanifu, utamaduni na urithi wa Zanzibar."
+            }
+
+          ]
+
+        }
+
+      },
+
+
+      /* ==================================================
+         NIGHTLIFE
+      ================================================== */
+
+      nightlife: {
+
+        name: "Nightlife & Burudani",
+        icon: "🌃",
+
+        regions: {
+
+          "Dar es Salaam": [
+
+            {
+              name: "Masaki",
+              type: "Nightlife",
+              image:
+                "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Masaki ni moja ya maeneo yenye restaurants, lounges na nightlife experiences mbalimbali."
+            }
+
+          ],
+
+          "Zanzibar": [
+
+            {
+              name: "Nungwi Nightlife",
+              type: "Nightlife",
+              image:
+                "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Nungwi inatoa nightlife na entertainment experiences karibu na bahari."
+            }
+
+          ]
+
+        }
+
+      },
+
+
+      /* ==================================================
+         DINING
+      ================================================== */
+
+      dining: {
+
+        name: "Chakula & Restaurants",
+        icon: "🍽️",
+
+        regions: {
+
+          "Dar es Salaam": [
+
+            {
+              name: "Masaki Dining",
+              type: "Dining",
+              image:
+                "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Gundua dining experiences mbalimbali kutoka local cuisine hadi fine dining."
+            }
+
+          ],
+
+          "Zanzibar": [
+
+            {
+              name: "Forodhani Gardens",
+              type: "Local Food",
+              image:
+                "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Forodhani ni sehemu maarufu Zanzibar kwa kuonja vyakula vya mitaani na ladha za Zanzibar."
+            }
+
+          ]
+
+        }
+
+      },
+
+
+      /* ==================================================
+         LUXURY
+      ================================================== */
+
+      luxury: {
+
+        name: "Luxury Experiences",
+        icon: "💎",
+
+        regions: {
+
+          "Zanzibar": [
+
+            {
+              name: "Luxury Beach Escape",
+              type: "Luxury Experience",
+              image:
+                "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Experience ya kifahari inayochanganya beach, resorts, private transfers na relaxation."
+            }
+
+          ],
+
+          "Arusha": [
+
+            {
+              name: "Luxury Safari",
+              type: "Luxury Safari",
+              image:
+                "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=85",
+              description:
+                "Safari ya kifahari yenye accommodation nzuri, private experiences na wildlife adventure."
+            }
+
+          ]
+
+        }
+
+      }
+
+    };
+
+
+    /* =====================================================
+       ELEMENTS
+    ===================================================== */
+
+    const categoryList =
+      document.getElementById("categoryList");
+
+    const regionList =
+      document.getElementById("regionList");
+
+    const destinationContent =
+      document.getElementById("destinationContent");
+
+    const modal =
+      document.getElementById("destinationModal");
+
+    const modalClose =
+      document.getElementById("modalClose");
+
+    const modalImage =
+      document.getElementById("modalImage");
+
+    const modalLocation =
+      document.getElementById("modalLocation");
+
+    const modalTitle =
+      document.getElementById("modalTitle");
+
+    const modalDescription =
+      document.getElementById("modalDescription");
+
+    const modalWhatsapp =
+      document.getElementById("modalWhatsapp");
+
+
+    let selectedCategory = null;
+    let selectedRegion = null;
+
+
+    /* =====================================================
+       LOAD CATEGORIES
+    ===================================================== */
+
+    function loadCategories() {
+
+      categoryList.innerHTML = "";
+
+      Object.entries(tourismData).forEach(
+        ([key, category], index) => {
+
+          const button =
+            document.createElement("button");
+
+          button.className =
+            "category-btn";
+
+          if (index === 0) {
+            button.classList.add("active");
+          }
+
+          button.innerHTML = `
+            <span class="category-icon">
+              ${category.icon}
+            </span>
+
+            <span>
+              ${category.name}
+            </span>
+          `;
+
+          button.addEventListener(
+            "click",
+            () => {
+
+              document
+                .querySelectorAll(".category-btn")
+                .forEach(btn =>
+                  btn.classList.remove("active")
+                );
+
+              button.classList.add("active");
+
+              selectedCategory = key;
+
+              loadRegions(key);
+
+            }
+          );
+
+          categoryList.appendChild(button);
+
+        }
+      );
+
+
+      selectedCategory =
+        Object.keys(tourismData)[0];
+
+      loadRegions(selectedCategory);
+
+    }
+
+
+    /* =====================================================
+       LOAD REGIONS
+    ===================================================== */
+
+    function loadRegions(categoryKey) {
+
+      const category =
+        tourismData[categoryKey];
+
+      const regions =
+        Object.keys(category.regions);
+
+      regionList.innerHTML = "";
+
+      selectedRegion = null;
+
+      destinationContent.innerHTML = `
+        <div class="destination-empty">
+          <div>
+            <strong>
+              Chagua Mkoa
+            </strong>
+
+            Chagua mkoa ili kuona
+            vivutio vilivyopo.
+          </div>
+        </div>
+      `;
+
+
+      regions.forEach(
+        (region, index) => {
+
+          const button =
+            document.createElement("button");
+
+          button.className =
+            "region-btn";
+
+          button.innerHTML = `
+            <span>
+              🇹🇿 ${region}
+            </span>
+
+            <span class="region-arrow">
+              →
+            </span>
+          `;
+
+          button.addEventListener(
+            "click",
+            () => {
+
+              document
+                .querySelectorAll(".region-btn")
+                .forEach(btn =>
+                  btn.classList.remove("active")
+                );
+
+              button.classList.add("active");
+
+              selectedRegion = region;
+
+              loadDestinations(
+                categoryKey,
+                region
+              );
+
+            }
+          );
+
+          regionList.appendChild(button);
+
+        }
+      );
+
+    }
+
+
+    /* =====================================================
+       LOAD DESTINATIONS
+    ===================================================== */
+
+    function loadDestinations(
+      categoryKey,
+      region
+    ) {
+
+      const destinations =
+        tourismData[
+          categoryKey
+        ].regions[region];
+
+
+      destinationContent.innerHTML = `
+        <div class="destination-grid"></div>
+      `;
+
+
+      const grid =
+        destinationContent.querySelector(
+          ".destination-grid"
+        );
+
+
+      destinations.forEach(
+        (destination, index) => {
+
+          const card =
+            document.createElement("article");
+
+          card.className =
+            "destination-card";
+
+          card.style.animationDelay =
+            `${index * 0.08}s`;
+
+
+          card.innerHTML = `
+
+            <img
+              src="${destination.image}"
+              alt="${destination.name}"
+              loading="lazy"
+            >
+
+            <div class="destination-info">
+
+              <small>
+                ${destination.type}
+              </small>
+
+              <h3>
+                ${destination.name}
+              </h3>
+
+            </div>
+
+          `;
+
+
+          card.addEventListener(
+            "click",
+            () => {
+
+              openDestination(
+                destination,
+                region
+              );
+
+            }
+          );
+
+
+          grid.appendChild(card);
+
+        }
+      );
+
+    }
+
+
+    /* =====================================================
+       OPEN DESTINATION
+    ===================================================== */
+
+    function openDestination(
+      destination,
+      region
+    ) {
+
+      modalImage.src =
+        destination.image;
+
+      modalImage.alt =
+        destination.name;
+
+      modalLocation.textContent =
+        `${region} • ${destination.type}`;
+
+      modalTitle.textContent =
+        destination.name;
+
+      modalDescription.textContent =
+        destination.description;
+
+
+      const message =
+        `Habari Queluxy Tours, ningependa kujua zaidi kuhusu ${destination.name} - ${region}.`;
+
+      modalWhatsapp.href =
+        `https://wa.me/255745179214?text=${encodeURIComponent(message)}`;
+
+
+      modal.classList.add("open");
+
+      document.body.style.overflow =
+        "hidden";
+
+    }
+
+
+    /* =====================================================
+       CLOSE MODAL
+    ===================================================== */
+
+    function closeModal() {
+
+      modal.classList.remove("open");
+
+      document.body.style.overflow =
+        "";
+
+    }
+
+
+    modalClose.addEventListener(
+      "click",
+      closeModal
+    );
+
+
+    modal.addEventListener(
+      "click",
+      event => {
+
+        if (
+          event.target === modal
+        ) {
+
+          closeModal();
+
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (
+          event.key === "Escape"
+        ) {
+
+          closeModal();
+
+        }
+
+      }
+    );
+
+
+    /* =====================================================
+       START WEBSITE
+    ===================================================== */
+
+    loadCategories();
+
+  </script>
+
+</body>
+</html>
